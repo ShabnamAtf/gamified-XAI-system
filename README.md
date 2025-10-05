@@ -6,9 +6,9 @@ Dual-logic XAI for ethical consumer decisions: **Kantian rules** + **utilitarian
 
 ## Quickstart
 ```bash
-python -m venv .venv && .\.venv\Scripts\activate   # Windows
+python -m venv .venv && .\.venv\Scripts\activate
 pip install -r requirements.txt
-streamlit run app.py   # اگر فایل UI در ui/ است: streamlit run ui/app.py
+streamlit run app.py         # or: streamlit run ui/app.py
 ## Features
 - Kantian rule checks (deontic constraints)
 - Utilitarian MCDA (weighted, signed, min–max normalized)
