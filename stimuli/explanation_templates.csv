@@ -1,0 +1,15 @@
+condition,rule_id,template_text
+kantian,K_WELFARE_LOW,"Violates animal-welfare duty (score {animal_welfare_0_100} < {th_welfare})."
+kantian,K_LABOUR_LOW,"Violates fair-labour duty (score {labour_community_0_100} < {th_labour})."
+kantian,K_TRANSP_LOW,"Falls below transparency duty (score {transparency_0_100} < {th_transparency})."
+kantian,K_PACK_RECYC_LOW,"Packaging responsibility risk (recyclability {packaging_recyclability_pct}% < {th_packaging}%)."
+kantian,K_ENV_CARBON_EXTREME,"High environmental burden (carbon {carbon_kgco2_perkg} > {th_carbon})."
+
+utilitarian,U_SUMMARY,"Utilitarian welfare = {util_score:.3f}; rank {util_rank}/{n_options}. Main drivers: {driver_pos_1}↑, {driver_neg_1}↓."
+utilitarian,U_TRADEOFF_PRICE_CARBON,"Lower price but higher carbon; net effect {delta_util:+.3f} vs. scenario best."
+utilitarian,U_COMPARE_BEST,"Best alternative: {best_option} (welfare {best_util:.3f}, Δ={delta_to_best:+.3f})."
+
+combined_meta,M_ALIGNMENT,"Aligned: no deontic violations; utilitarian rank {util_rank}/{n_options}. Both frameworks support this choice."
+combined_meta,M_CONFLICT,"Conflict: Kantian flags {violations_list}; utilitarian rank {util_rank}/{n_options}. Consider {alt_violation_free} (0 violations, Δwelfare={delta_alt:+.3f})."
+combined_meta,M_RESOLUTION_HINT,"To resolve: prioritize duty {top_duty} or accept a welfare trade-off of {delta_tradeoff:+.3f}."
+none,NA,""

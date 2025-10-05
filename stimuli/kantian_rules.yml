@@ -1,0 +1,53 @@
+schema: xai_game.kantian_rules.v1
+meta:
+  severity_weights: { "1": 1, "2": 2, "3": 3 }  
+  aggregation: sum_severity                        
+  precedence: [humane_treatment, fair_labour, transparency, environment, waste]
+
+rules:
+  schema: xai_game.kantian_rules.v1
+meta:
+  severity_weights: { "1": 1, "2": 2, "3": 3 }
+  aggregation: sum_severity
+  precedence: [humane_treatment, fair_labour, transparency, environment, waste]
+
+rules:
+  - id: K_WELFARE_LOW
+    duty: humane_treatment
+    attribute: animal_welfare_0_100
+    op: "<"
+    threshold: 60
+    severity: 3
+    message_id: K_WELFARE_LOW
+
+  - id: K_LABOUR_LOW
+    duty: fair_labour
+    attribute: labour_community_0_100
+    op: "<"
+    threshold: 60
+    severity: 3
+    message_id: K_LABOUR_LOW
+
+  - id: K_TRANSP_LOW
+    duty: transparency
+    attribute: transparency_0_100
+    op: "<"
+    threshold: 60
+    severity: 2
+    message_id: K_TRANSP_LOW
+
+  - id: K_PACK_RECYC_LOW
+    duty: waste
+    attribute: packaging_recyclability_pct
+    op: "<"
+    threshold: 70
+    severity: 1
+    message_id: K_PACK_RECYC_LOW
+
+  - id: K_ENV_CARBON_EXTREME
+    duty: environment
+    attribute: carbon_kgco2_perkg
+    op: ">"
+    threshold: 11.0
+    severity: 2
+    message_id: K_ENV_CARBON_EXTREME

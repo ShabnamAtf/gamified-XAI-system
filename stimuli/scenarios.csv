@@ -1,0 +1,29 @@
+scenario_id,product_id,product_name,category,price_cad,carbon_kgco2_perkg,animal_welfare_0_100,transparency_0_100,packaging_recyclability_pct,labour_community_0_100
+S1,S1A,Local Co-op 1L,Milk,4.79,1.10,85,80,90,75
+S1,S1B,Budget Industrial 1L,Milk,3.69,1.50,40,35,60,45
+S1,S1C,Organic Import 1L,Milk,5.39,1.20,90,70,70,70
+S2,S2A,Enzymed Local 1L,LactoseFreeMilk,5.29,1.20,80,78,90,75
+S2,S2B,Budget LF 1L,LactoseFreeMilk,4.19,1.40,45,40,60,50
+S2,S2C,Organic LF Import 1L,LactoseFreeMilk,5.99,1.30,90,72,75,70
+S3,S3A,Local Plain Yogurt 750g,PlainYogurt,3.99,2.20,80,82,85,75
+S3,S3B,Budget Plain Yogurt 750g,PlainYogurt,2.79,2.60,40,35,55,45
+S3,S3C,Greek-style Import 750g,PlainYogurt,4.49,2.80,70,65,70,65
+S4,S4A,Local Greek Yogurt 500g,GreekYogurt,4.59,3.00,78,80,80,75
+S4,S4B,Budget Greek Yogurt 500g,GreekYogurt,3.49,3.20,42,40,55,50
+S4,S4C,Premium Import Greek 500g,GreekYogurt,5.19,3.40,75,70,70,68
+S5,S5A,Local Aged Cheddar 200g,Cheddar,6.49,11.0,85,85,75,78
+S5,S5B,Budget Cheddar 200g,Cheddar,4.79,12.5,45,40,60,50
+S5,S5C,Organic Import Cheddar 200g,Cheddar,7.29,12.0,90,75,70,75
+S6,S6A,Local Feta 200g,Feta,5.99,10.0,80,78,70,72
+S6,S6B,Budget Cow Feta 200g,Feta,4.59,11.5,40,35,55,48
+S6,S6C,Imported PDO Feta 200g,Feta,6.99,12.5,75,70,65,70
+S7,S7A,Local Mozzarella 200g,Mozzarella,5.49,9.5,80,80,70,75
+S7,S7B,Budget Mozzarella 200g,Mozzarella,3.99,10.5,45,40,55,50
+S7,S7C,Premium Import Mozzarella 200g,Mozzarella,6.29,10.8,78,70,65,68
+S8,S8A,Local Probiotic Drink 6x100ml,ProbioticDrink,4.79,2.5,78,78,60,72
+S8,S8B,Budget Probiotic Drink 6x100ml,ProbioticDrink,3.59,2.8,40,35,40,48
+S8,S8C,Premium Sugar-free Probiotic 6x100ml,ProbioticDrink,5.49,2.7,70,65,50,65
+S3,S3B,Budget Plain Yogurt 750g,PlainYogurt,2.49,2.10,40,40,50,45
+S4,S4B,Budget Greek Yogurt 500g,GreekYogurt,3.19,3.00,42,40,50,45
+S5,S5B,Budget Cheddar 200g,Cheddar,4.39,11.0,45,40,55,45
+S6,S6B,Budget Cow Feta 200g,Feta,4.19,10.8,40,35,50,45

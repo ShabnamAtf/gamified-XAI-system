@@ -1,0 +1,39 @@
+schema: xai_game.experiment_config.v1
+
+paths:
+  scenarios: stimuli/scenarios.csv
+  attribute_schema: stimuli/attribute_schema.json
+  kantian_rules: stimuli/kantian_rules.yml
+  utilitarian_weights: stimuli/utilitarian_weights.yml
+  explanation_templates: stimuli/explanation_templates.csv
+
+conditions:
+  - id: none
+    label: "No explanation"
+  - id: kantian
+    label: "Kantian"
+  - id: utilitarian
+    label: "Utilitarian"
+  - id: combined_meta
+    label: "Combined + Meta"
+
+rounds: 6
+budget_cad: 25
+
+normalization:
+  method: minmax_by_scenario
+  save_normalized_tables: true
+
+utilitarian:
+  weight_set_id: default
+  aggregation: weighted_sum
+
+kantian:
+  severity_aggregation: sum_severity
+
+random_seed: 42
+
+output:
+  dir: outputs
+  save_telemetry: true
+  save_condition_summaries: true

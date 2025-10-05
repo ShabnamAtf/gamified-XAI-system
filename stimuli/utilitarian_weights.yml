@@ -1,0 +1,50 @@
+schema: xai_game.utilitarian_weights.v1
+
+normalization:
+  method: minmax_by_scenario
+  clip_to_range: true
+  decimals: 3
+
+
+aggregation:
+  form: weighted_sum   # score = Σ (w_i * x_i_norm)
+  decimals: 3
+
+
+weights:
+  price_cad: -0.25
+  carbon_kgco2_perkg: -0.25
+  animal_welfare_0_100: 0.20
+  transparency_0_100: 0.15
+  packaging_recyclability_pct: 0.10
+  labour_community_0_100: 0.15
+
+
+weight_sets:
+  - id: default
+    label: "Balanced"
+    weights:
+      price_cad: -0.25
+      carbon_kgco2_perkg: -0.25
+      animal_welfare_0_100: 0.20
+      transparency_0_100: 0.15
+      packaging_recyclability_pct: 0.10
+      labour_community_0_100: 0.15
+  - id: eco_max
+    label: "Environment-leaning"
+    weights:
+      price_cad: -0.15
+      carbon_kgco2_perkg: -0.40
+      animal_welfare_0_100: 0.20
+      transparency_0_100: 0.15
+      packaging_recyclability_pct: 0.10
+      labour_community_0_100: 0.10
+  - id: budget_sensitive
+    label: "Price-leaning"
+    weights:
+      price_cad: -0.45
+      carbon_kgco2_perkg: -0.15
+      animal_welfare_0_100: 0.15
+      transparency_0_100: 0.10
+      packaging_recyclability_pct: 0.05
+      labour_community_0_100: 0.10

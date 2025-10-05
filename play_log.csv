@@ -1,0 +1,7 @@
+round,scenario_id,product_id,product_name,price_cad,util_score,kantian_severity_sum
+1,S1,S1B,Budget Industrial 1L,3.69,-0.24999999999937503,9
+2,S2,S2B,Budget LF 1L,4.19,-0.24999999999875,9
+3,S3,S3B,Budget Plain Yogurt 750g,2.49,0.015957446808510297,9
+4,S4,S4B,Budget Greek Yogurt 500g,3.19,0.0,9
+5,S5,S5A,Local Aged Cheddar 200g,6.49,0.39674329501920264,0
+6,S6,S6B,Budget Cow Feta 200g,4.59,-0.1440476190475481,11

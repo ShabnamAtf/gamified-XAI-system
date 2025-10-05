@@ -1,0 +1,33 @@
+from pathlib import Path
+import pandas as pd
+
+root = Path(__file__).resolve().parents[1]
+out = root / "outputs"
+
+summary = pd.read_csv(out / "condition_summary.csv")
+order = ["none", "kantian", "utilitarian", "combined_meta"]
+summary["condition"] = pd.Categorical(summary["condition"], categories=order, ordered=True)
+summary = summary.sort_values("condition")
+summary["violation_free_share_pct"] = (summary["violation_free_share"] * 100).round(0).astype("Int64")
+
+cr_path = out / "condition_conflict_resolution.csv"
+conf = pd.read_csv(cr_path) if cr_path.exists() else pd.DataFrame([{"value": float("nan")}])
+rate = conf.loc[0, "value"]
+
+lines = []
+lines.append("All results are computed on eight synthetic coffee shopping scenarios.")
+uplift = "; ".join(f"{r.condition}: {r.welfare_uplift_vs_price:+.3f}" for _, r in summary.iterrows())
+lines.append(f"Welfare uplift vs a price-only baseline — {uplift}.")
+vfree = "; ".join(f"{r.condition}: {int(r.violation_free_share_pct)}%" for _, r in summary.iterrows())
+lines.append(f"Share of violation-free choices — {vfree}.")
+sev = "; ".join(f"{r.condition}: {r.mean_kantian_severity:.3f}" for _, r in summary.iterrows())
+lines.append(f"Average deontic-violation severity — {sev}.")
+if pd.notna(rate):
+    lines.append(f"Meta-explainer conflict-resolution rate: {rate:.3f}.")
+
+text = "\n".join(lines)
+print(text)
+(out / "poster_results.txt").write_text(text, encoding="utf-8")
+
+
+
