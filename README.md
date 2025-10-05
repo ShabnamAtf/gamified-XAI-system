@@ -8,3 +8,4 @@ python -m venv .venv && . .venv/Scripts/activate   # Windows
 # or: python3 -m venv .venv && source .venv/bin/activate  # macOS/Linux
 pip install -r requirements.txt
 streamlit run app.py
+[📄 Preprint (PDF)](docs/meta-explained-preprint.pdf)
