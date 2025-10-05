@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: Gamified XAI System
+authors:
+  - family-names: Atf
+    given-names: Zahra
+  - family-names: Lewis
+    given-names: Peter R.
+license: MIT
+version: 0.1.0
+preferred-citation:
+  type: article
+  title: "Kantian–Utilitarian XAI: Meta-Explained"
+  authors:
+    - family-names: Atf
+      given-names: Zahra
+    - family-names: Lewis
+      given-names: Peter R.
+  year: 2025
