@@ -1,1 +1,9 @@
+# Outputs / reports
+outputs/*
+!outputs/README.md
+
+# Executables (third-party)
+ngrok*
+cloudflared*
+*.exe
 
